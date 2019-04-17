@@ -9,19 +9,50 @@ object bombon {
 }
 
 object alfajor {
-	// definir
+	var peso = 300
+	method precio() { return 12 }
+	method peso() { return peso }
+	method mordisco() { peso = peso * 0.2 }
+	method gusto() { return "chocolate" }
+	method libreGluten() { return false }
 }
 
 object caramelo {
-	// definir
+	var peso = 5
+	
+	method precio() { return 1 }
+	method peso() { return peso }
+	method mordisco() { peso = peso - 1 }
+	method gusto() { return "frutilla" }
+	method libreGluten() { return true }
 }
 
 object chupetin {
 	// definir
+	var peso = 7
+	
+	method precio() { return 2 }
+	method peso() { return peso }
+	method mordisco() { peso = peso * 0.1.max(2) }
+	method gusto() { return "naranja" }
+	method libreGluten() { return true }
 }
 
 object oblea {
 	// definir
+	var peso = 250
+	
+	method precio() { return 5  }
+	method peso() { return peso }
+	method mordisco() { 
+		if (peso>70) {
+		 peso = peso * 0.5}
+	else {
+		peso = peso * 0.25
+	}
+	}
+	method gusto() { return "vainilla" }
+	method libreGluten() { return false }
 }
 
 object chocolatin {
@@ -36,6 +67,12 @@ object chocolatin {
 		pesoInicial = cuanto
 		pesoActual = cuanto
 	}
+	method precio (){
+		return pesoInicial * 0.5
+	}
+	method gusto() { return "chocolate" }
+	method libreGluten() { return false }
+	method mordisco() { pesoActual = pesoActual - 1 }
 }
 
 object golosinaBaniada {
@@ -82,7 +119,7 @@ object tuttifrutti {
 				gusto = "naranja"
 			}
 			else {
-				gusto = "frutgilla"
+				gusto = "frutilla"
 			}
 		}
 	}

@@ -2,7 +2,6 @@ import golosinas.*
 import mariano.*
 
 describe "tests de mariano" {
-
 	fixture {
 		chocolatin.pesoInicial(100)
 		mariano.comprar(chocolatin)
@@ -11,14 +10,14 @@ describe "tests de mariano" {
 	}
 
 	test "test comprar" {
-		assert.equals(3, mariano.golosinas().size())
-		assert.that(mariano.golosinas().contains(chocolatin))
-		assert.that(mariano.golosinas().contains(caramelo))
-		assert.that(mariano.golosinas().contains(bombon))
-		assert.notThat(mariano.golosinas().contains(chupetin))
+		assert.equals(3, mariano.misGolosinas.size())
+		assert.that(mariano.misGolosinas.contains(chocolatin))
+		assert.that(mariano.misGolosinas.contains(caramelo))
+		assert.that(mariano.misGolosinas.contains(bombon))
+		assert.notThat(mariano.misGolosinas.contains(chupetin))
 	}
 	
-	test "probar golosinas" {
+	test "test probar" {
 		/* habilitar las lineas anuladas cuando se complete la definicion 
 		 * de las golosinas
 		 */
