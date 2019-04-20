@@ -67,12 +67,13 @@ object chocolatin {
 		pesoInicial = cuanto
 		pesoActual = cuanto
 	}
+	method peso() {return pesoActual}
 	method precio (){
 		return pesoInicial * 0.5
 	}
 	method gusto() { return "chocolate" }
 	method libreGluten() { return false }
-	method mordisco() { pesoActual = pesoActual - 1 }
+	method mordisco() { pesoActual = pesoActual - 2 }
 }
 
 object golosinaBaniada {
@@ -98,7 +99,7 @@ object tuttifrutti {
 	var libreGluten=false
 	var property gusto="frutilla"
 	
-	method libreDeGluten() = libreGluten
+	method libreGluten() = libreGluten
 	method setLibreGluten(esLibreGluten){
 		libreGluten=esLibreGluten
 	}
